@@ -1,9 +1,11 @@
 import React from 'react';
+import AplicationProvider from './context';
+import CountriesPage from './pages/CountriesPage';
 
 const App = () => (
-  <div className="App">
-    Funcionando
-  </div>
+  <AplicationProvider>
+    <CountriesPage />
+  </AplicationProvider>
 );
 
 export default App;
