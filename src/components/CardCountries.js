@@ -1,15 +1,13 @@
 import React from 'react';
 
-const CardCountries = ({ dataCountries }) => {
-  return dataCountries.map(({ countries }) =>
-    countries.map(({ name, capital, flag: { svgFile } }) => (
-      <div key={ Math.random() * 10 }>
-        <h1>{name}</h1>
-        <h3>{capital}</h3>
-        <img src={svgFile} alt="Badeira do País" width="60pxx" />
-      </div>
-    ))
-  );
+const CardCountries = ({ countries }) => {
+  return countries.map(({ name, capital, svgFile }) => (
+    <div key={ Math.random() * 10 } className="card-countries">
+      <h1>{name}</h1>
+      <h3>{capital}</h3>
+      <img src={svgFile} alt="Badeira do País" />
+    </div>
+  ))
 };
 
 export default CardCountries;
