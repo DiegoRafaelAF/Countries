@@ -37,7 +37,8 @@ const Countries = () => {
       <div>
         <label htmlFor="input-countrie"><strong>Digite o nome de um país: </strong></label>
         <input
-          capital="input-countrie"
+          data-testid="search-input"
+          name="input-countrie"
           type="text"
           onChange={({ target }) => setInput(target.value)}
         />
