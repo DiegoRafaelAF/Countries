@@ -1,20 +1,17 @@
-Estrutura do projeto:
+Para rodar o Projeto:
 
-src/
- |--- assets/   # Aqui ficará as imagens
- |--- pages/    # As nossas páginas
- |--- services/ # Configuração de serviços utilizados
- |--- styles/   # Estilos globais
- |--- App.js    # Arquivo que conterá configurações principais do App
- |--- index.js  # Ponto de entrada para execução do nosso App
- |--- context/  # Contexto da Aplicação
+1 - Clone o repositório;
+   no terminal digite: git clone https://github.com/DiegoRafaelAF/Countries.git OU git@github.com:DiegoRafaelAF/Countries.git (SSH)
 
- Dependências: 
+2 - Instale as dependências;
+   dentro do diretório do projeto digite: npm install
 
- react-router-dom
- axios
- react-testing-library
+3 - Inicie o projeto:;
+   para rodar o projeto digite: npm start
 
-    Axios: Cliente HTTP usado para enviar requisições à API;
-    ReactRouter:Lib implementação de navegação na aplicação;
-    TestingLibraey: Lib para implementação de testes unitários;
+Decisões:
+
+- Eu instalei o axios para fazer as requisições, mas não consegui utilizar. Por esse motivo utilizei fetch.
+Segui os padrões fornecidos pela API Graph Countries (https://github.com/lennertVanSever/graphcountries).
+
+- Utilizei Context para centralização dos dados e fornescimento dos mesmos entre componentes sem precisar passar explicitamente props entre cada nível.
