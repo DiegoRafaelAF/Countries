@@ -15,3 +15,6 @@ Decisões:
 Segui os padrões fornecidos pela API Graph Countries (https://github.com/lennertVanSever/graphcountries).
 
 - Foi utilizado Context para centralização dos dados e fornescimento dos mesmos entre componentes sem precisar passar explicitamente props entre cada nível.
+
+Para rodar o test:
+   dentro do diretório no terminal digite: npm test
