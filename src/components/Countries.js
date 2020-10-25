@@ -14,16 +14,18 @@ const Countries = () => {
 
   if (dataCountries) {
     dataCountries.map(({ countries }) =>
-      countries.map(({ name, capital, flag: { svgFile } }) =>
-        arrCountries.push({ name, capital, svgFile })
+      countries.map(({ name, nativeName, capital, flag: { svgFile } }) =>
+        arrCountries.push({ name, nativeName, capital, svgFile })
       )
     );
   }
 
   const filteredPlanet = (data) => {
     if (input !== '') {
-      return data.filter(({ name, capital }) =>
+      return data.filter(({ name, nativeName, capital }) =>
         name.toLowerCase().includes(input.toLowerCase())
+        ||
+        nativeName.toLowerCase().includes(input.toLowerCase())
         ||
         capital.toLowerCase().includes(input.toLowerCase())
       );

@@ -8,6 +8,7 @@ const api = fetch(URL_COUNTRIES, {
       CallingCode {
         countries {
           name,
+          nativeName,
           capital,
           flag {
             svgFile

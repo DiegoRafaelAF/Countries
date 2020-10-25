@@ -12,8 +12,8 @@
 }
 
 .card-countries {
-  width: 40vw;
-  height: 40vh;
+  width: 30vw;
+  height: 45vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,6 +26,7 @@
 
 .card-countries img {
   max-width: 15vw;
+  max-height: 10vh;
 }
 
 @keyframes cards {
