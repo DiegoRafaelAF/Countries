@@ -8,9 +8,9 @@ const AplicationProvider = ({ children }) => {
 
   const [dataCountries, setDataCountries] = useState();
 
-  const getCountries = () =>
+  const getCountries = () => 
     api
-      .then(({ data: { CallingCode } }) => setDataCountries(CallingCode));
+      .then(({ data: { Country } }) => setDataCountries(Country));
 
   const context = {
     dataCountries,

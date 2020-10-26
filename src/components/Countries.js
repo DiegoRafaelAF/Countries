@@ -9,14 +9,14 @@ const Countries = () => {
   let arrCountries = [];
 
   useEffect(() => {
-    getCountries();
-  }, [dataCountries, getCountries, input]);
+    if (!dataCountries || dataCountries.length === 0) {
+      getCountries();
+    }
+  }, [dataCountries, getCountries]);
 
   if (dataCountries) {
-    dataCountries.map(({ countries }) =>
-      countries.map(({ name, nativeName, capital, flag: { svgFile } }) =>
-        arrCountries.push({ name, nativeName, capital, svgFile })
-      )
+    dataCountries.map(({ name, nativeName, capital, flag: { svgFile } }) =>
+      arrCountries.push({ name, nativeName, capital, svgFile })
     );
   }
 
@@ -38,7 +38,7 @@ const Countries = () => {
         <label htmlFor="input-countrie"><strong>Digite o nome de um país: </strong></label>
         <input
           data-testid="search-input"
-          name="input-countrie"
+          name="input-country"
           type="text"
           onChange={({ target }) => setInput(target.value)}
         />
