@@ -5,14 +5,14 @@ const api = fetch(URL_COUNTRIES, {
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ query: `
     query {
-      CallingCode {
-        countries {
-          name,
-          nativeName,
-          capital,
-          flag {
-            svgFile
-          },
+      Country {
+        name
+        nativeName
+        capital
+        flag {
+          emoji
+          emojiUnicode
+          svgFile
         }
       }
     }
